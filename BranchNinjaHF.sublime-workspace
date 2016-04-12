@@ -1,0 +1,1016 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"an",
+				"angularVelocity	Float"
+			],
+			[
+				"Pla",
+				"player	var"
+			],
+			[
+				"Sw",
+				"switchState(...)	Void"
+			],
+			[
+				"flxc",
+				"FlxColor"
+			],
+			[
+				"FlxText",
+				"FlxTextAlign	class"
+			],
+			[
+				"fo",
+				"setFormat(...)	flixel.text.FlxText"
+			],
+			[
+				"cen",
+				"screenCenter(...)	flixel.FlxObject"
+			],
+			[
+				"w",
+				"width	Int"
+			],
+			[
+				"Asse",
+				"assets	package"
+			],
+			[
+				"get",
+				"getInstance"
+			],
+			[
+				"h",
+				"health"
+			],
+			[
+				"tr",
+				"tr	snips"
+			],
+			[
+				"Play",
+				"PlayState	class"
+			],
+			[
+				"prope",
+				"properties"
+			],
+			[
+				"pro",
+				"property"
+			],
+			[
+				"node",
+				"nodeName"
+			],
+			[
+				"wid",
+				"widthInTiles"
+			],
+			[
+				"wi",
+				"widthInTiles"
+			],
+			[
+				"tota",
+				"totalWidth	var"
+			],
+			[
+				"tot",
+				"totalWidth"
+			],
+			[
+				"parse",
+				"parseInt"
+			],
+			[
+				"total",
+				"totalHeight	var"
+			],
+			[
+				"la",
+				"layer"
+			],
+			[
+				"Tilema",
+				"TiledMap	kha.tiled"
+			],
+			[
+				"tile",
+				"Tile"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
+				"window",
+				"windowWidth"
+			],
+			[
+				"Sce",
+				"Scene	class"
+			],
+			[
+				"Til",
+				"Tilemap	class"
+			],
+			[
+				"pl",
+				"playing	Bool"
+			],
+			[
+				"Options",
+				"OptionsSub"
+			],
+			[
+				"gra",
+				"loadGraphic(...)	flixel.FlxSprite"
+			],
+			[
+				"sho",
+				"showBanner"
+			],
+			[
+				"banne",
+				"bannerId"
+			],
+			[
+				"AdMo",
+				"AdMob	extension.admob"
+			],
+			[
+				"admo",
+				"admob"
+			],
+			[
+				"cl",
+				"closeCallback(  )	Void"
+			],
+			[
+				"close",
+				"closeCall(  )	Void"
+			],
+			[
+				"Ins",
+				"InstrucctionsSub	Instructions"
+			],
+			[
+				"op",
+				"openSubState"
+			],
+			[
+				"Instr",
+				"InstrucSub	var"
+			],
+			[
+				"Close",
+				"closeCallback(  )	Void"
+			],
+			[
+				"i",
+				"music	flixel.system.FlxSound"
+			],
+			[
+				"In",
+				"Int	class"
+			],
+			[
+				"FlxTex",
+				"FlxTextAlign	class"
+			],
+			[
+				"flxTe",
+				"FlxTextAlign	class"
+			],
+			[
+				"fille",
+				"fillRect(...)	Void"
+			],
+			[
+				"As",
+				"Assets"
+			],
+			[
+				"draw",
+				"drawRect(...)	Void"
+			],
+			[
+				"g",
+				"g2	kha.graphics2.Graphics"
+			],
+			[
+				"open",
+				"openSubState(...)	Void"
+			],
+			[
+				"al",
+				"alpha	Float"
+			],
+			[
+				"LINE",
+				"LINE_STRIP	Int"
+			],
+			[
+				"TRI",
+				"TRIANGLE_FAN	Int"
+			],
+			[
+				"TR",
+				"TRIANGLE_STRIP	Int"
+			],
+			[
+				"frag",
+				"fragmentColor"
+			],
+			[
+				"vert",
+				"vertices"
+			],
+			[
+				"stru",
+				"structureLength	var"
+			],
+			[
+				"mvp",
+				"mvpID"
+			],
+			[
+				"m",
+				"multmat"
+			],
+			[
+				"Matri",
+				"Matrix4	kha.math"
+			],
+			[
+				"Co",
+				"ConstantLocation"
+			],
+			[
+				"index",
+				"indexBuffer"
+			],
+			[
+				"verte",
+				"vertexBuffer"
+			],
+			[
+				"Vertex",
+				"VertexBuffer	kha.graphics4"
+			],
+			[
+				"vertex",
+				"vertexBuffer	var"
+			],
+			[
+				"Fra",
+				"FragmentShader	kha.graphics4"
+			],
+			[
+				"Verte",
+				"VertexStructure	kha.graphics4"
+			],
+			[
+				"Index",
+				"IndexBuffer	kha.graphics4"
+			],
+			[
+				"en",
+				"enableVertexAttribArray(...)	Void"
+			],
+			[
+				"zip",
+				"zipf"
+			],
+			[
+				"Prog",
+				"Program	kha.graphics4"
+			],
+			[
+				"vertexS",
+				"VertexShader	kha.graphics4"
+			],
+			[
+				"FRa",
+				"FragmentShader	kha.graphics4"
+			],
+			[
+				"Ver",
+				"VertexStructure	kha.graphics4"
+			],
+			[
+				"ps",
+				"psv	Public Static Variable (psv)"
+			],
+			[
+				"Ga",
+				"Game	kha"
+			],
+			[
+				"Frame",
+				"Framebuffer	kha"
+			],
+			[
+				"My",
+				"MyGame	Game"
+			],
+			[
+				"FlxS",
+				"FlxSpriteUtil	class"
+			],
+			[
+				"u",
+				"util	package"
+			],
+			[
+				"sw",
+				"switchState(...)	Void"
+			],
+			[
+				"FlxT",
+				"FlxText	flixel.text"
+			],
+			[
+				"it",
+				"it_path"
+			],
+			[
+				"Error",
+				"ERROR"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "source/Main.hx",
+			"settings":
+			{
+				"buffer_size": 179,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/MenuState.hx",
+			"settings":
+			{
+				"buffer_size": 1059,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/PlayState.hx",
+			"settings":
+			{
+				"buffer_size": 674,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/entities/Player.hx",
+			"settings":
+			{
+				"buffer_size": 399,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "source/entities/Shuriken.hx",
+			"settings":
+			{
+				"buffer_size": 349,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/usr/lib/haxelib/flixel/4,0,1/flixel/FlxSprite.hx",
+			"settings":
+			{
+				"buffer_size": 40810,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 321.0,
+		"last_filter": "insta",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"update",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"add re",
+				"Package Control: Add Repository"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"edit pac",
+				"Package Control: Advanced Install Package"
+			],
+			[
+				"create",
+				"Package Control: Create Package File"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"installe",
+				"Haxelib: List Installed"
+			],
+			[
+				"isnta",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 457.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/media/PROJECTx_2015/HAXE_PROJx/BranchNinjaHF",
+		"/media/PROJECTx_2015/HAXE_PROJx/BranchNinjaHF/assets",
+		"/media/PROJECTx_2015/HAXE_PROJx/BranchNinjaHF/assets/images",
+		"/media/PROJECTx_2015/HAXE_PROJx/BranchNinjaHF/assets/images/hud",
+		"/media/PROJECTx_2015/HAXE_PROJx/BranchNinjaHF/source"
+	],
+	"file_history":
+	[
+		"/media/PROJECTx_2015/HAXE_PROJx/BranchNinjaHF/source/MenuState.hx",
+		"/media/PROJECTx_2015/HAXE_PROJx/BranchNinjaHF/Project.xml",
+		"/media/PROJECTx_2015/HAXE_PROJx/KHA_projx/BranchNinja/Sources/Bug.hx",
+		"/media/PROJECTx_2015/HAXE_PROJx/KHA_projx/BranchNinja/Sources/Diefx.hx",
+		"/media/PROJECTx_2015/HAXE_PROJx/KHA_projx/BranchNinja/Sources/Player.hx",
+		"/media/PROJECTx_2015/HAXE_PROJx/KHA_projx/BranchNinja/Sources/Collider.hx",
+		"/media/PROJECTx_2015/HAXE_PROJx/KHA_projx/BranchNinja/Sources/Reset.hx",
+		"/media/PROJECTx_2015/HAXE_PROJx/KHA_projx/BranchNinja/Sources/State.hx",
+		"/media/PROJECTx_2015/HAXE_PROJx/KHA_projx/StateMachine/Sources/Game.hx",
+		"/media/PROJECTx_2015/HAXE_PROJx/KHA_projx/BranchNinja/Sources/kha/tiled/Tileset.hx",
+		"/media/PROJECTx_2015/HAXE_PROJx/KHA_projx/BranchNinja/Sources/kha/tiled/display/KhaRenderer.hx",
+		"/media/PROJECTx_2015/HAXE_PROJx/KHA_projx/BranchNinja/.gitignore",
+		"/media/PROJECTx_2015/HAXE_PROJx/KHA_projx/BranchNinja/Sources/.fuse_hidden0000044c00000001",
+		"/media/PROJECTx_2015/HAXE_PROJx/KHA_projx/BranchNinja/Sources/Layer.hx",
+		"/media/PROJECTx_2015/HAXE_PROJx/KHA_projx/BranchNinja/Sources/Tile.hx",
+		"/media/PROJECTx_2015/HAXE_PROJx/KHA_projx/BranchNinja/REFERENCES/Design/testMap.tmx",
+		"/media/PROJECTx_2015/HAXE_PROJx/KHA_projx/BranchNinja/Assets/level/testMap.tmx",
+		"/media/PROJECTx_2015/HAXE_PROJx/KHA_projx/stalei-khapunktiled-989ec77e35c5/com/khapunk/tmx/TmxMap.hx",
+		"/media/PROJECTx_2015/HAXE_PROJx/KHA_projx/stalei-khapunktiled-989ec77e35c5/com/khapunk/tmx/TmxEntity.hx",
+		"/media/LINUX_PROJx/PROJECTx/CLUSTER/GARNIER/GARNIER_ROCK_hou/render.cmd",
+		"/media/PROJECTx_2015/HAXE_PROJx/KHA_projx/TPlayer/khafile.js",
+		"/media/PROJECTx_2015/HAXE_PROJx/KHA_projx/TPlayer/Sources/TPlayer.hx",
+		"/media/PROJECTx_2015/HAXE_PROJx/KHA_projx/TPlayer/Libraries/Kha2D/Sources/kha2d/Scene.hx",
+		"/media/PROJECTx_2015/HAXE_PROJx/KHA_projx/TPlayer/Libraries/Kha2D/Sources/kha2d/Sprite.hx",
+		"/media/PROJECTx_2015/HAXE_PROJx/KHA_projx/Sources/Main.hx",
+		"/media/PROJECTx_2015/HAXE_PROJx/KHA_projx/TPlayer/Sources/enemy/Walker.hx",
+		"/media/PROJECTx_2015/HAXE_PROJx/KHA_projx/TPlayer/Sources/Main.hx",
+		"/media/PROJECTx_2015/HAXE_PROJx/KHA_projx/TPlayer/Sources/enemy/Enemy.hx",
+		"/media/PROJECTx_2015/HAXE_PROJx/KHA_projx/Sources/TPlayer.hx",
+		"/home/varomix/.config/sublime-text-3/Packages/Haxe/Support/Haxe.sublime-settings",
+		"/home/varomix/MEGA/GAMEDEV_stuff/KHA_stuff/Kha.sublime-build",
+		"/home/varomix/bin/maya16",
+		"/usr/lib/haxelib/flixel/4,0,1/flixel/FlxG.hx",
+		"/usr/lib/haxelib/flixel/4,0,1/flixel/FlxG",
+		"/media/PROJECTx_2015/HAXE_PROJx/SlideNumbersPuzzle/SlideNumbersPuzzle_HaxeFlixel/source/Reg.hx",
+		"/media/My_Book/_XOFT_2015/GAMEx/SkipWaiting_Linux64/ReadMe.txt",
+		"/home/varomix/.vscode/extensions/ms-vscode.cpptools-0.4.2/README.mdAssetPaths.hx",
+		"/media/PROJECTx_2015/HAXE_PROJx/SlideNumbersPuzzle/SlideNumbersPuzzle_HaxeFlixel/Project.xml",
+		"/home/varomix/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/media/PROJECTx_2015/HAXE_PROJx/SlideNumbersPuzzle/SlideNumbersPuzzle_HaxeFlixel/export/android/bin/deps/google-play-services_lib/project.properties",
+		"/home/varomix/dev/android/android-ndk/RELEASE.TXT",
+		"/media/PROJECTx_2015/HAXE_PROJx/SlideNumbersPuzzle/SlideNumbersPuzzle_HaxeFlixel/source/Instructions.hx",
+		"/media/PROJECTx_2015/HAXE_PROJx/SlideNumbersPuzzle/SlideNumbersPuzzle_HaxeFlixel/source/Main.hx",
+		"/media/PROJECTx_2015/HAXE_PROJx/SlideNumbersPuzzle/SlideNumbersPuzzle_HaxeFlixel/source/Square.hx",
+		"/media/PROJECTx_2015/HAXE_PROJx/SlideNumbersPuzzle/SlideNumbersPuzzle_HaxeFlixel/source/Options.hx",
+		"/media/PROJECTx_2015/HAXE_PROJx/SlideNumbersPuzzle/SlideNumbersPuzzle_HaxeFlixel/source/Win.hx",
+		"/media/PROJECTx_2015/HAXE_PROJx/khaflixel/.gitmodules",
+		"/home/varomix/keyconf.py",
+		"/home/varomix/install-addons.sh",
+		"/home/varomix/hs_err_pid11171.log",
+		"/home/varomix/bin/khamake",
+		"/usr/lib/libc.conf",
+		"/media/PROJECTx_2015/HAXE_PROJx/Kha_MIX_Empty/.gitignore",
+		"/media/PROJECTx_2015/HAXE_PROJx/Kha_MIX_Empty/README.md",
+		"/media/PROJECTx_2015/HAXE_PROJx/KhaStudioTest/build/project-html5.hxml",
+		"/media/PROJECTx_2015/HAXE_PROJx/KhaStudioTest/Sources/Main.hx",
+		"/home/varomix/dev/KodeStudio/extensions/chrome-debug/README.md",
+		"/home/varomix/dev/KodeStudio/scripts/code.sh",
+		"/home/varomix/dev/KodeStudio/gulpfile.js",
+		"/home/varomix/vscode/scripts/code.sh",
+		"/home/varomix/vscode/resources/linux/bin/code.sh",
+		"/media/PROJECTx_2015/HAXE_PROJx/KhaVulkanTestSimple/Empty/khafile.js",
+		"/media/My_Book/__PROJECTx_2015/cmiVFX/H14_picker/files/PRJ_Houdini_PyGui/PythonLibs/CharPickerTutorial_FINAL.py",
+		"/home/varomix/.zshrc",
+		"/home/varomix/houdini15.0/scripts/python/mixtodo/tasks.json",
+		"/opt/hfs15.0.423/python/lib/python2.7/site-packages-ui-forced/PySide/examples/script/calculator/calculator.py",
+		"/opt/hfs15.0.423/houdini/python2.7libs/charpicker/__init__.py",
+		"/opt/hfs15.0.423/houdini/python2.7libs/charpicker/mainwidget.py",
+		"/media/LINUX_PROJx/PROJECTx/MIXSTUDIO_INTERNAL/TODO_list/mixdo.py",
+		"/media/My_Book/__TRAINING_2015/PYTHON/Thomdo-master/thomdo.py",
+		"/opt/hfs15.0.423/houdini/python_panels/CharacterPicker.pypanel",
+		"/media/My_Book/__TRAINING_2015/PYTHON/Thomdo-master/tasks.json",
+		"/home/varomix/.local/share/applications/Fast Ark.desktop",
+		"/media/My_Book/__TRAINING_2015/PYTHON/tinydb-3.1.3/README.rst",
+		"/usr/share/applications/kde4/ark.desktop",
+		"/home/varomix/.local/share/applications/arkMIX.desktop",
+		"/home/varomix/.local/share/applications/ark.desktop",
+		"/home/varomix/.local/share/applications/Ark instant.desktop",
+		"/home/varomix/.local/share/applications/ark-4.desktop",
+		"/usr/share/kde4/services/ark_dndextract.desktop",
+		"/media/My_Book/_XOFT_2015/LINUX/JefeCheck_Linux_x86_64/setup.sh",
+		"/usr/share/applications/atom.desktop",
+		"/media/My_Book/_XOFT_2015/LINUX/JefeCheck_Linux_x86_64/README.linux",
+		"/home/varomix/bin/Shotcut/Shotcut.desktop",
+		"/media/varomix2TB/_PROJECTx_Archive/CMIVFX_Hip_Tricks_2/VOL4/uploadvids.sh",
+		"/media/My_Book/Dropbox/mixDropbox/_PROYECTOx_/SPACESHOOTER_godot/spaceshooter/license.txt",
+		"/media/PROJECTx_2015/OS X 10.10 Yosemite VMware Image/README.txt",
+		"/media/PROJECTx_2015/OS X 10.10 Yosemite VMware Image/OS X 10.10 Yosemite Image/OS X 10.10 Yosemite.vmx",
+		"/media/My_Book/_XOFT_2015/MAC_OSX/Adobe_Photoshop_Lightroom_CC_2015_v6.4/Torrent downloaded from MacAPPS at torrent-core.org.txt",
+		"/media/My_Book/_XOFT_2015/MAC_OSX/vmware_OSX/unlocker207/readme.txt",
+		"/media/My_Book/_XOFT_2015/MAC_OSX/vmware_OSX/unlocker207/win-install.cmd",
+		"/media/My_Book/_XOFT_2015/GAMEDEVx/Defold-linux.gtk.x86/Defold.ini",
+		"/etc/samba/smb.conf",
+		"/media/PROJECTx_2015/UE4_410_LNX/UnrealEngine/Engine/Config/BaseScalability.ini",
+		"/media/PROJECTx_2015/UE4_410_LNX/UnrealEngine/Engine/Programs/UnrealBuildTool/BuildConfiguration.xml",
+		"/home/varomix/bin/wakeGibson",
+		"/media/PROJECTx_2015/UE4_PROJx/03_BuildingEscape/BuildingEscape/BuildingEscape.workspace",
+		"/media/PROJECTx_2015/UE4_PROJx/03_BuildingEscape/BuildingEscape/.gitignore",
+		"/home/varomix/.bashrc",
+		"/media/PROJECTx_2015/UE4_410_LNX/UnrealEngine/Engine/Config/Linux/LinuxEngine.ini",
+		"/media/PROJECTx_2015/UE4_PROJx/03_BuildingEscape/BuildingEscape/BuildingEscapeCodeCompletionFolders.txt",
+		"/media/PROJECTx_2015/UE4_PROJx/03_BuildingEscape/BuildingEscape/README.md",
+		"/media/PROJECTx_2015/UE4_PROJx/03_BuildingEscape/BuildingEscape/.kdev4/Includes.txt",
+		"/media/PROJECTx_2015/UE4_PROJx/03_BuildingEscape/BuildingEscape/.kdev4/Defines.txt",
+		"/home/varomix/MEGA/UE4_stuff/UnrealEngine.gitignore.txt",
+		"/media/LINUX_PROJx/AtomicGameEngine/Artifacts/AtomicEditor/debug.log",
+		"/media/LINUX_PROJx/AtomicExamples/Basic2D/Resources.asset",
+		"/media/PROJECTx_2015/UE4_410_LNX/UnrealEngine/Engine/Source/Programs/AutomationTool/Linux/Linux.Automation.csproj",
+		"/media/PROJECTx_2015/UE4_410_LNX/UnrealEngine/Engine/Source/Programs/AutomationTool/Android/Android.Automation.csproj",
+		"/media/PROJECTx_2015/UE4_410_LNX/UnrealEngine/Engine/Source/Programs/AutomationTool/HTML5/HTML5.Automation.csproj",
+		"/media/LINUX_PROJx/AtomicGameEngine/README.md",
+		"/usr/share/applications/unity-monodevelop.desktop",
+		"/media/LINUX_PROJx/PROJECTx/cmiVFX_Projx/cmiVFX_fireMan/HOU_FireMan/notes.txt",
+		"/media/LINUX_PROJx/AtomicExamples/Basic2D/Basic2D.atomic",
+		"/media/My_Book/__PROJECTx_2015/Sparky/.gitignore",
+		"/media/My_Book/__PROJECTx_2015/Sparky/README.md",
+		"/home/varomix/temp/glfw-3.1.2/examples/Makefile",
+		"/home/varomix/Downloads/xdk_web_linux64/install.sh",
+		"/home/varomix/Downloads/xdk_web_linux64/rpm/opt/intel/XDK/xdk.sh",
+		"/home/varomix/Downloads/xdk_web_linux64/pset/32e/install.log",
+		"/home/varomix/Downloads/xdk_web_linux64/pset/scripts/force_remove.sh",
+		"/home/varomix/Downloads/xdk_web_linux64/pset/activation/install_fnp.sh",
+		"/home/varomix/Downloads/xdk_web_linux64/pset/activation/README.txt",
+		"/home/varomix/Downloads/xdk_web_linux64/silent.cfg",
+		"/home/varomix/MAMBA_PROJx/MATERIAL/WORK/mochaTesting/OUTPUT/test.trk",
+		"/home/varomix/temp/screen_Tracker1.trk",
+		"/media/My_Book/_XOFT_2015/GAMEDEVx/phaser-2.4.6/typescript/readme.md",
+		"/media/My_Book/_XOFT_2015/LINUX/mochaPro/mochaPro5_beta/usr/share/applications/mochapro.desktop"
+	],
+	"find":
+	{
+		"height": 29.0
+	},
+	"find_in_files":
+	{
+		"height": 106.0,
+		"where_history":
+		[
+			"/media/PROJECTx_2015/HAXE_PROJx/KHA_projx/TPlayer"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"clickTxt",
+			"state",
+			"other",
+			"public",
+			"properties",
+			"widthInTiles",
+			"get_totalWidth",
+			"layer",
+			"layers",
+			");\n",
+			"Tile",
+			"blob",
+			"tilemap",
+			"bg",
+			"back",
+			"bg",
+			"tilemap",
+			"background",
+			"back",
+			"x",
+			"dire",
+			"outofview",
+			"collisionLayer",
+			"collisionlayer",
+			"movesprite",
+			"shot",
+			"hit(",
+			"Ballshot.hit",
+			"shots",
+			"ballSho",
+			"shoot",
+			"hit",
+			"options",
+			"volume",
+			"sound",
+			"sound.music",
+			"options",
+			"InstrucctionsSub",
+			"InstrucctionsS",
+			"music",
+			"mute",
+			";\n",
+			"mute",
+			"bannerId",
+			";\n",
+			"admo",
+			"haxe",
+			"click_snd",
+			"fade",
+			"FlxTimer",
+			"Platform",
+			"xml",
+			"2uno",
+			"2",
+			"gtk",
+			"prompt_segment",
+			"prompt_dir",
+			"prompt",
+			"import_geom",
+			"import_geo",
+			"wordDir",
+			"python",
+			"Numeric",
+			"site-packages",
+			"plat-linux2",
+			"python2.6",
+			"lib64",
+			"#",
+			"restartBtn",
+			"ID =",
+			"ID",
+			"\";\n",
+			"‘",
+			"subobject",
+			"translationVector",
+			"gl.draw",
+			"gl.",
+			"triangle",
+			"triangleVertexPositionBuffer",
+			"DEPTH_TEST",
+			"js",
+			"Dyna",
+			"Dynamic",
+			"webgl",
+			"PASTE_YOUR_PFHOSTID",
+			"it_path",
+			"report"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"dist-packages",
+			"plat-x86_64-linux-gnu",
+			"python2.7",
+			"lib",
+			"'",
+			"squareVertexPositionBuffer"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "source/Main.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 179,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								160,
+								160
+							]
+						],
+						"settings":
+						{
+							"haxe-build-id": 0,
+							"syntax": "Packages/sublime_kha/Haxe.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "source/MenuState.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1059,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1053,
+								1053
+							]
+						],
+						"settings":
+						{
+							"haxe-build-id": 0,
+							"syntax": "Packages/sublime_kha/Haxe.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 399.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "source/PlayState.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 674,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								531,
+								531
+							]
+						],
+						"settings":
+						{
+							"haxe-build-id": 0,
+							"syntax": "Packages/sublime_kha/Haxe.tmLanguage"
+						},
+						"translation.x": -0.0,
+						"translation.y": 171.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "source/entities/Player.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 399,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								399,
+								399
+							]
+						],
+						"settings":
+						{
+							"haxe-build-id": 0,
+							"syntax": "Packages/sublime_kha/Haxe.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "source/entities/Shuriken.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 349,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								336,
+								336
+							]
+						],
+						"settings":
+						{
+							"haxe-build-id": 0,
+							"syntax": "Packages/sublime_kha/Haxe.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/usr/lib/haxelib/flixel/4,0,1/flixel/FlxSprite.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 40810,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11276,
+								11276
+							]
+						],
+						"settings":
+						{
+							"haxe-build-id": 0,
+							"syntax": "Packages/sublime_kha/Haxe.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 320.0,
+						"translation.y": 5760.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 67.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 179.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "BranchNinjaHF.sublime-project",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"assets/sounds/sounds-go-here.txt"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 172.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
