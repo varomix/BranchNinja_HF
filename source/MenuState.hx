@@ -39,7 +39,6 @@ class MenuState extends FlxState
 
 		if (FlxG.mouse.justPressed)
 	    {
-	    	trace("mouse pressed here ");
 	    	FlxG.switchState( new PlayState());
 	    }
 	}
