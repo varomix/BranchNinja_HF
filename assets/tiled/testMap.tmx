@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="64" height="9" tilewidth="36" tileheight="36" nextobjectid="44">
- <tileset firstgid="1" name="mapTiles_colors" tilewidth="36" tileheight="36" tilecount="40" columns="8">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="64" height="9" tilewidth="36" tileheight="36" nextobjectid="49">
+ <tileset firstgid="1" name="mapTiles_colors" tilewidth="36" tileheight="36" tilecount="40">
   <image source="mapTiles_colors.png" width="288" height="180"/>
  </tileset>
- <tileset firstgid="41" name="pixelKraken" tilewidth="30" tileheight="23" tilecount="1" columns="1">
+ <tileset firstgid="41" name="pixelKraken" tilewidth="30" tileheight="23" tilecount="1">
   <image source="pixelKraken.png" width="30" height="23"/>
  </tileset>
  <imagelayer name="bg">
-  <image source="bg.png" width="576" height="324"/>
+  <image source="bg.png"/>
  </imagelayer>
  <layer name="spikes" width="64" height="9">
   <properties>
@@ -64,6 +64,9 @@
   <object id="34" name="floor" type="floor" x="1771" y="181.166" width="42.0033" height="43.3333"/>
   <object id="35" name="floor" type="floor" x="1891.66" y="95.1665" width="390" height="50"/>
   <object id="36" name="floor" type="floor" x="2281" y="84.1665" width="28" height="192.667"/>
-  <object id="37" name="bug" type="bug" x="628.5" y="18" width="36" height="36"/>
+  <object id="37" name="bug" type="bug" x="649" y="25" width="30" height="30"/>
+  <object id="44" name="bug2" type="bug2" x="847.667" y="78.3333" width="48" height="48"/>
+  <object id="45" name="bug3" type="bug3" x="1112.75" y="147.03" width="56" height="56"/>
+  <object id="46" name="exit" type="exit" x="2257.16" y="13.0124" width="36" height="36"/>
  </objectgroup>
 </map>

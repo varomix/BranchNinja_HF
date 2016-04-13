@@ -10,6 +10,7 @@ import flixel.math.FlxPoint;
 import flixel.text.FlxText;
 import flixel.FlxObject;
 import flixel.group.FlxGroup;
+import flixel.ui.FlxButton;
 import flixel.util.FlxTimer;
 import flixel.addons.editors.tiled.TiledImageLayer;
 import flixel.FlxCamera;
@@ -19,6 +20,8 @@ import fx.Diefx;
 import fx.EnemyExplode;
 import fx.Jumpfx;
 import fx.Pickupfx;
+import extension.share.Share;
+import flixel.tweens.FlxTween;
 
 using flixel.util.FlxSpriteUtil;
 
@@ -29,28 +32,40 @@ class PlayState extends FlxState
 	public var commitsScore:FlxText;
 	public var bugstxt:FlxText;
 	public var bugsScore:FlxText;
+	public var won_tryagain:FlxText;
 	public var tryagain:FlxText;
 	public var tryagainBg:FlxSprite;
+	public var won_tryagainbg:FlxSprite;
 
 	public var health:Health;
-
+	public var twitterBtn:FlxButton;
 
 	public var level:TiledLevel;
 	var player:Player;
 	public var coins:FlxGroup;
 	public var bugs:FlxGroup;
 	public var floor:FlxGroup;
+	public var exit:FlxSprite;
 	public var items(default, null):FlxTypedGroup<FlxSprite>;
 	private var _entities:FlxGroup;
+	public var bugsKilled:Float = 0;
 
 	public var damageable:Bool;
+	public var won:Bool;
 
 	private static var youDied:Bool = false;
 
 	override public function create():Void
 	{
 		super.create();
+
+		// SHARE
+		Share.init(Share.TWITTER);
+		Share.defaultURL = 'http://www.varomix.net';
+		// Share.defaultSubject = "I killed a lot of bugs in Branch Ninja";
+
 		// FlxG.debugger.drawDebug = true;
+		FlxG.mouse.hideCursor();
 
 		FlxG.sound.playMusic("menu_theme");
 		FlxG.sound.music.volume = 0.4;
@@ -58,7 +73,11 @@ class PlayState extends FlxState
 
 		FlxG.camera.fade(FlxColor.BLACK, 0.5, true);
 
+		twitterBtn = new FlxButton(0,0, "", shareStuff);
+		twitterBtn.loadGraphic("assets/images/hud/share.png");
+
 		youDied = false;
+		won = false;
 
 		// game level
 		coins = new FlxGroup();
@@ -71,7 +90,7 @@ class PlayState extends FlxState
 		add(bg);
 
 		add(level.backgroundLayer);
-		// add(level.imagesLayer);
+		add(level.imagesLayer);
 
 		add(floor);
 		add(level.objectsLayer);
@@ -79,7 +98,6 @@ class PlayState extends FlxState
 		
 		add(bugs);
 		add(coins);
-
 
 		var textSize = 20;
 
@@ -104,7 +122,7 @@ class PlayState extends FlxState
 		commitsScore.scrollFactor.set(0, 0); 
 		commitsScore.borderColor = 0xff000000;
 		commitsScore.borderStyle = SHADOW;
-		commitsScore.text = Std.string(coins.countDead() / 5);
+		commitsScore.text = Std.string(coins.countDead());
 		add(commitsScore);
 
 		bugstxt = new FlxText(340, 5, 150);
@@ -112,22 +130,32 @@ class PlayState extends FlxState
 		bugstxt.scrollFactor.set(0, 0); 
 		bugstxt.borderColor = 0xff000000;
 		bugstxt.borderStyle = SHADOW;
-		bugstxt.text = "BUGS:";
+		bugstxt.text = "BUGS LEFT:";
 		add(bugstxt);
 
-		bugsScore = new FlxText(410, 5, 100);
+		bugsScore = new FlxText(470, 5, 100);
 		bugsScore.setFormat("assets/data/bitlow.ttf", textSize, FlxColor.PINK);
 		bugsScore.scrollFactor.set(0, 0); 
 		bugsScore.borderColor = 0xff000000;
 		bugsScore.borderStyle = SHADOW;
-		bugsScore.text = Std.string(bugs.countLiving() / 5);
+		bugsScore.text = Std.string(bugs.countLiving());
 		add(bugsScore);
 
-		tryagainBg = new FlxSprite(0,130);
+		tryagainBg = new FlxSprite(0,0);
 		tryagainBg.scrollFactor.set(0,0);
 		tryagainBg.makeGraphic(FlxG.width, 65, FlxColor.BLACK);
 		tryagainBg.visible = false;
+		tryagainBg.screenCenter();
+		tryagainBg.y -= 4;
 		add(tryagainBg);
+		
+		won_tryagainbg = new FlxSprite(0,0);
+		won_tryagainbg.scrollFactor.set(0,0);
+		won_tryagainbg.makeGraphic(FlxG.width, 90, FlxColor.BLACK);
+		won_tryagainbg.visible = false;
+		won_tryagainbg.screenCenter();
+		won_tryagainbg.y -= 4;
+		add(won_tryagainbg);
 
 		tryagain = new FlxText(0, 0, FlxG.width);
 		tryagain.setFormat("assets/data/bitlow.ttf", 50, FlxColor.MAGENTA, FlxTextAlign.CENTER);
@@ -139,7 +167,20 @@ class PlayState extends FlxState
 		tryagain.visible = false;
 		add(tryagain);
 
+
+		won_tryagain = new FlxText(0, 0, FlxG.width);
+		won_tryagain.setFormat("assets/data/bitlow.ttf", 20, FlxColor.MAGENTA, FlxTextAlign.CENTER);
+		won_tryagain.scrollFactor.set(0, 0); 
+		won_tryagain.borderColor = 0xff000000;
+		won_tryagain.borderStyle = SHADOW;
+		won_tryagain.text = "I THINK YOU CAN DO BETTER";
+		won_tryagain.screenCenter();
+		won_tryagain.y += 25;
+		won_tryagain.visible = false;
+		add(won_tryagain);
+
 		damageable = true;
+		Reg.health = 100;
 		player = new Player();
 		player.x = -10;
 		player.y = 36;
@@ -153,10 +194,14 @@ class PlayState extends FlxState
 
 		_entities.add(items);
 		add(_entities);
+		twitterBtn.screenCenter();
+		twitterBtn.y += 300;
+		add(twitterBtn);
 	}
 
 	override public function update(elapsed:Float):Void
 	{
+
 		if (FlxG.keys.justPressed.UP && player.y > 36) 
 		{
 			add(new Jumpfx(player.x, player.y));
@@ -171,7 +216,7 @@ class PlayState extends FlxState
 			player.y += 72;
 		}
 
-	    if(FlxG.keys.justPressed.CONTROL && !youDied)
+	    if(FlxG.keys.justPressed.CONTROL && !youDied && !won)
 		{
 			items.add(new Shuriken(player.x + 20, player.y + 10));
 			FlxG.sound.play("shuriken_snd").volume=0.25;
@@ -196,20 +241,69 @@ class PlayState extends FlxState
 			}
 		}
 
-		if(FlxG.mouse.justPressed && youDied)
+		if(FlxG.mouse.justPressed && youDied && FlxG.mouse.y < 220)
 		{
-			FlxG.resetState();
+			FlxG.sound.play("wooshintro_snd");
+	    	FlxG.camera.shake(0.07, 0.1);
+			new FlxTimer().start(0.3, function(_)FlxG.resetState());
+
 		}
+
+		if(FlxG.mouse.justPressed && won && FlxG.mouse.y < 220)
+		{
+			FlxG.sound.play("wooshintro_snd");
+	    	FlxG.camera.shake(0.07, 0.1);
+			new FlxTimer().start(0.3, function(_)FlxG.resetState());
+
+		}
+
+
+		FlxG.overlap(exit, player, win);
+	}
+
+	public function win(Exit:FlxObject, Player:FlxObject):Void
+	{
+		won = true;
+		player.allowCollisions = 0;
+		FlxG.sound.music.stop();
+		FlxG.sound.play("levelcomplete_snd");
+		player.velocity.x = 0;
+		player.animation.play("win");
+
+		FlxG.mouse.showCursor();
+
+		// TWITTER BUTTON
+		FlxTween.tween(twitterBtn, {y:220}, 0.2);
+		
+		won_tryagainbg.visible = true;
+
+		if(Std.parseInt(bugsScore.text) == 0 && coins.countLiving() == 0){
+			tryagain.visible = true;
+			tryagain.text = "YOU ARE A NINJA!";
+			// tryagain.y -= 10;
+		}
+		else{
+			tryagain.visible = true;
+			tryagain.text = "YOU MADE IT!";
+			tryagain.y -= 10;
+			won_tryagain.visible = true;
+		}
+
+
+
 	}
 
 	public function hitPlayer(ply:FlxObject, bugs:FlxObject):Void
 	{
 		if (damageable) {
 			damageable = false;
+			FlxG.sound.play("hitplayer_snd").volume = 4;
+	    	FlxG.camera.shake(0.02, 0.1);
+
 			player.animation.play("hitAnim");
 			player.hurt(25);
 			Reg.health = player.health;
-			new FlxTimer().start(0.5, function(_){ player.animation.play("walk"); damageable = true;});
+			new FlxTimer().start(0.7, function(_){ player.animation.play("walk"); damageable = true;});
 		}
 
 
@@ -218,22 +312,26 @@ class PlayState extends FlxState
 	public function hitBug(shuriken:FlxObject, bug:FlxObject):Void
 	{
 		add(new EnemyExplode(bug.x, bug.y));
-		bug.kill();
+		FlxG.sound.play("dead_bug_snd").volume = 2;
+
+		// bug.kill();
+		bug.hurt(26);
 		shuriken.kill();
-		// Reg.bugs--;
-		// bugs.countLiving();
-		bugsScore.text = Std.string(bugs.countLiving() / 5);
+		bugsScore.text = Std.string(bugs.countLiving());
+		if(bug.health <= 0) bugsKilled++;
 
 	}
 
 	public function deadState()
 	{
 		// YOU ARE DEAD
+		FlxG.mouse.showCursor();
 		Reg.health = 0;
 		add(new DeadSkullfx(player.x, player.y));
 		add(new Diefx(player.x - 55, player.y - 75));
 		// Sounds
 	    FlxG.sound.music.stop();
+	    FlxG.camera.shake(0.05, 0.2);
 
 		FlxG.sound.play("explosiondeath_snd");
 		FlxG.sound.play("death_snd").volume = 1;
@@ -243,6 +341,10 @@ class PlayState extends FlxState
 		tryagainBg.visible = true;
 		player.velocity.x = 0;
 		player.visible = false;
+		player.allowCollisions = 0;
+
+		// TWITTER BUTTON
+		FlxTween.tween(twitterBtn, {y:220}, 0.2);
 	    
 		new FlxTimer().start(0.3, function(_) FlxG.sound.play("gameover_snd").volume = 2);
 
@@ -252,13 +354,18 @@ class PlayState extends FlxState
 	public function getCoin(Coin:FlxObject, Player:FlxObject):Void
 	{
 		Coin.kill();
-		commitsScore.text = Std.string(coins.countDead() / 5);
+		commitsScore.text = Std.string(coins.countDead());
 		add(new Pickupfx(Coin.x - 2, Coin.y - 7));
 		FlxG.sound.play("pickups_snd").volume = 0.15;
 
-		if (coins.countLiving() == 0)
-		{
-			trace("no more Krakens");
-		}
+		// if (coins.countLiving() == 0)
+		// {
+		// 	trace("no more Krakens");
+		// }
+	}
+
+	public function shareStuff()
+	{
+	    Share.share("I killed " + bugsKilled + " bugs in Branch Ninja, think you can be a better ninja? #GKContest try it");
 	}
 }

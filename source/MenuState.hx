@@ -4,6 +4,7 @@ import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.text.FlxText;
+import flixel.tweens.FlxTween;
 import flixel.ui.FlxButton;
 import flixel.math.FlxMath;
 import flixel.util.FlxColor;
@@ -13,6 +14,7 @@ import flixel.util.FlxTimer;
 class MenuState extends FlxState
 {
 	var logo:FlxSprite;
+	var shurikenIntro:FlxSprite;
 
 	override public function create():Void
 	{
@@ -22,6 +24,8 @@ class MenuState extends FlxState
 		FlxG.sound.music.volume = 0.4;
 
 		FlxG.camera.fade(FlxColor.BLACK, 0.5, true);
+
+		shurikenIntro = new FlxSprite("assets/images/hud/shurikenIntro.png");
 
 
 		logo = new FlxSprite(0,0, "assets/images/hud/BranchNinja_LOGO_v01.png");
@@ -37,6 +41,8 @@ class MenuState extends FlxState
 		instructionTxt.setFormat("assets/data/bitlow.ttf", 16, FlxColor.WHITE, FlxTextAlign.CENTER);
 		add(instructionTxt);
 
+		add(shurikenIntro);
+		shurikenIntro.x = -400;
 
 	}
 
@@ -48,9 +54,12 @@ class MenuState extends FlxState
 	    {
 	    	FlxG.sound.music.stop();
 	    	FlxG.sound.play("wooshintro_snd");
+	    	FlxG.camera.shake(0.07, 0.1);
+	    	FlxTween.tween(shurikenIntro, {x:340, y: 20}, 0.1);
+	    	FlxG.camera.flash(FlxColor.WHITE, 0.1);
 			FlxG.camera.fade(FlxColor.BLACK, 0.5, false);
 
-	    	new FlxTimer().start(0.7, function(_) FlxG.switchState( new PlayState()));
+	    	new FlxTimer().start(1.3, function(_) FlxG.switchState( new PlayState()));
 
 	    }
 	}

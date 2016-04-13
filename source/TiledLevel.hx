@@ -1,6 +1,8 @@
 package;
 
 import entities.Bug;
+import entities.Bug2;
+import entities.Bug3;
 import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
@@ -76,9 +78,10 @@ class TiledLevel extends TiledMap
 			
 			var tilemap:FlxTilemap = new FlxTilemap();
 			tilemap.loadMapFromArray(tileLayer.tileArray, width, height, processedPath,
-				tileSet.tileWidth, tileSet.tileHeight, OFF, tileSet.firstGID, 1, 1);
+			tileSet.tileWidth, tileSet.tileHeight, OFF, tileSet.firstGID, 1, 1);
 			tilemap.y += 16; // local HACK
-			loadObjects(state);
+			
+			
 				
 			if (tileLayer.properties.contains("nocollide"))
 			{
@@ -93,6 +96,7 @@ class TiledLevel extends TiledMap
 				collidableTileLayers.push(tilemap);
 			}
 		}
+		loadObjects(state);
 	}
 	
 	public function loadObjects(state:PlayState)
@@ -192,13 +196,21 @@ class TiledLevel extends TiledMap
 			case "bug":
 				var bug = new Bug(x, y + 16);
 				state.bugs.add(bug);
+
+			case "bug2":
+				var bug2 = new Bug2(x, y + 16);
+				state.bugs.add(bug2);
+
+			case "bug3":
+				var bug3 = new Bug3(x, y + 16);
+				state.bugs.add(bug3);
 				
 			case "exit":
 				// Create the level exit
-				var exit = new FlxSprite(x, y);
-				exit.makeGraphic(32, 32, 0xff3f3f3f);
-				exit.exists = false;
-				// state.exit = exit;
+				var exit = new FlxSprite(x, y + 16);
+				exit.makeGraphic(36, 36, 0xff3f3f3f);
+				// exit.exists = false;
+				state.exit = exit;
 				group.add(exit);
 		}
 	}

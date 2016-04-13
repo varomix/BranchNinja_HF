@@ -12,6 +12,7 @@ class Player extends FlxSprite {
 
 	    animation.add("walk", [12,13,14,15], 12, true);
 	    animation.add("hitAnim", [24,25,26,27], 12, true);
+	    animation.add("win", [17,18,19,20], 6, true);
 	    animation.add("shoot", [23]);
 
 	    width = 14;
