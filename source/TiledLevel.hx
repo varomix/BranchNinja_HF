@@ -1,5 +1,6 @@
 package;
 
+import entities.Bug;
 import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
@@ -187,6 +188,10 @@ class TiledLevel extends TiledMap
 				var tileset = g.map.getGidOwner(o.gid);
 				var coin = new FlxSprite(x, y + 16, c_PATH_LEVEL_TILESHEETS + tileset.imageSource);
 				state.coins.add(coin);
+
+			case "bug":
+				var bug = new Bug(x, y + 16);
+				state.bugs.add(bug);
 				
 			case "exit":
 				// Create the level exit

@@ -1,0 +1,10 @@
+GAME NOTES
+
+hit and enemy sound
+level end detection
+
+make level(s)
+
+logo shuriken and flash
+
+camera shake

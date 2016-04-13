@@ -7,6 +7,8 @@ import flixel.text.FlxText;
 import flixel.ui.FlxButton;
 import flixel.math.FlxMath;
 import flixel.util.FlxColor;
+import flixel.util.FlxTimer;
+
 
 class MenuState extends FlxState
 {
@@ -15,6 +17,12 @@ class MenuState extends FlxState
 	override public function create():Void
 	{
 		super.create();
+		FlxG.sound.playMusic("main_theme");
+		FlxG.sound.music.fadeIn(5, 0, 0.4);
+		FlxG.sound.music.volume = 0.4;
+
+		FlxG.camera.fade(FlxColor.BLACK, 0.5, true);
+
 
 		logo = new FlxSprite(0,0, "assets/images/hud/BranchNinja_LOGO_v01.png");
 		logo.screenCenter();
@@ -30,7 +38,6 @@ class MenuState extends FlxState
 		add(instructionTxt);
 
 
-
 	}
 
 	override public function update(elapsed:Float):Void
@@ -39,7 +46,12 @@ class MenuState extends FlxState
 
 		if (FlxG.mouse.justPressed)
 	    {
-	    	FlxG.switchState( new PlayState());
+	    	FlxG.sound.music.stop();
+	    	FlxG.sound.play("wooshintro_snd");
+			FlxG.camera.fade(FlxColor.BLACK, 0.5, false);
+
+	    	new FlxTimer().start(0.7, function(_) FlxG.switchState( new PlayState()));
+
 	    }
 	}
 }
