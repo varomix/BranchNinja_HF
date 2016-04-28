@@ -19,7 +19,7 @@ class Bug3 extends FlxSprite {
 
 	    width = 10;
 	    offset.x = 11;
-	    velocity.x = -45;
+	    velocity.x = -5;
 
 	}
 

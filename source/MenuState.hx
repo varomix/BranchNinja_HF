@@ -33,7 +33,7 @@ class MenuState extends FlxState
 		logo.y -= 30;
 		add(logo);
 
-		var clickTxt = new FlxText(0,230, FlxG.width, "CLICK TO PLAY", 32);
+		var clickTxt = new FlxText(0,230, FlxG.width, "CLICK OR ENTER TO PLAY", 32);
 		clickTxt.setFormat("assets/data/bitlow.ttf", 32, FlxColor.WHITE, FlxTextAlign.CENTER);
 		add(clickTxt);
 
@@ -50,7 +50,7 @@ class MenuState extends FlxState
 	{
 		super.update(elapsed);
 
-		if (FlxG.mouse.justPressed)
+		if (FlxG.mouse.justPressed || FlxG.keys.justPressed.ENTER)
 	    {
 	    	FlxG.sound.music.stop();
 	    	FlxG.sound.play("wooshintro_snd");

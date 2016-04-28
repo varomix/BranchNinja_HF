@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="64" height="9" tilewidth="36" tileheight="36" nextobjectid="49">
- <tileset firstgid="1" name="mapTiles_colors" tilewidth="36" tileheight="36" tilecount="40">
+ <tileset firstgid="1" name="mapTiles_colors" tilewidth="36" tileheight="36" tilecount="40" columns="8">
   <image source="mapTiles_colors.png" width="288" height="180"/>
  </tileset>
- <tileset firstgid="41" name="pixelKraken" tilewidth="30" tileheight="23" tilecount="1">
+ <tileset firstgid="41" name="pixelKraken" tilewidth="30" tileheight="23" tilecount="1" columns="1">
   <image source="pixelKraken.png" width="30" height="23"/>
  </tileset>
  <imagelayer name="bg">
-  <image source="bg.png"/>
+  <image source="bg.png" width="576" height="324"/>
  </imagelayer>
  <layer name="spikes" width="64" height="9">
   <properties>

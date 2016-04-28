@@ -34,6 +34,7 @@ class PlayState extends FlxState
 	public var bugsScore:FlxText;
 	public var won_tryagain:FlxText;
 	public var tryagain:FlxText;
+	public var tryaganKeys:FlxText;
 	public var tryagainBg:FlxSprite;
 	public var won_tryagainbg:FlxSprite;
 
@@ -61,7 +62,7 @@ class PlayState extends FlxState
 
 		// SHARE
 		Share.init(Share.TWITTER);
-		Share.defaultURL = 'http://www.varomix.net';
+		Share.defaultURL = 'http://varomix.net/branchninja/';
 		// Share.defaultSubject = "I killed a lot of bugs in Branch Ninja";
 
 		// FlxG.debugger.drawDebug = true;
@@ -83,7 +84,7 @@ class PlayState extends FlxState
 		coins = new FlxGroup();
 		bugs = new FlxGroup();
 		floor = new FlxGroup();
-		level = new TiledLevel("assets/tiled/testMap.tmx", this);
+		level = new TiledLevel("assets/tiled/level1.tmx", this);
 
 		var bg = new FlxSprite("assets/tiled/bg.png");
 		bg.scrollFactor.set(0,0);
@@ -157,13 +158,25 @@ class PlayState extends FlxState
 		won_tryagainbg.y -= 4;
 		add(won_tryagainbg);
 
+		tryaganKeys = new FlxText(0, 0, FlxG.width);
+		tryaganKeys.setFormat("assets/data/bitlow.ttf", 20, FlxColor.MAGENTA, FlxTextAlign.CENTER);
+		tryaganKeys.scrollFactor.set(0, 0); 
+		tryaganKeys.borderColor = 0xff000000;
+		tryaganKeys.borderStyle = SHADOW;
+		tryaganKeys.text = "CLICK OR\nENTER TO";
+		tryaganKeys.screenCenter();
+		tryaganKeys.x -= 150;
+		tryaganKeys.visible = false;
+		add(tryaganKeys);
+
 		tryagain = new FlxText(0, 0, FlxG.width);
 		tryagain.setFormat("assets/data/bitlow.ttf", 50, FlxColor.MAGENTA, FlxTextAlign.CENTER);
 		tryagain.scrollFactor.set(0, 0); 
 		tryagain.borderColor = 0xff000000;
 		tryagain.borderStyle = SHADOW;
-		tryagain.text = "CLICK TO TRY AGAIN";
+		tryagain.text = "TRY AGAIN!";
 		tryagain.screenCenter();
+		tryagain.x += 70;
 		tryagain.visible = false;
 		add(tryagain);
 
@@ -232,7 +245,8 @@ class PlayState extends FlxState
 		FlxG.overlap(items, bugs, hitBug);
 		FlxG.overlap(player, bugs, hitPlayer);
 
-		if (FlxG.overlap(player, floor))
+
+		if (FlxG.overlap(player, floor) || player.health <= 0)
 		{
 			if(!youDied)
 			{
@@ -241,7 +255,7 @@ class PlayState extends FlxState
 			}
 		}
 
-		if(FlxG.mouse.justPressed && youDied && FlxG.mouse.y < 220)
+		if(FlxG.mouse.justPressed && youDied && FlxG.mouse.y < 220 || FlxG.keys.justPressed.ENTER && youDied)
 		{
 			FlxG.sound.play("wooshintro_snd");
 	    	FlxG.camera.shake(0.07, 0.1);
@@ -249,7 +263,7 @@ class PlayState extends FlxState
 
 		}
 
-		if(FlxG.mouse.justPressed && won && FlxG.mouse.y < 220)
+		if(FlxG.mouse.justPressed && won && FlxG.mouse.y < 220 || FlxG.keys.justPressed.ENTER && won)
 		{
 			FlxG.sound.play("wooshintro_snd");
 	    	FlxG.camera.shake(0.07, 0.1);
@@ -297,7 +311,7 @@ class PlayState extends FlxState
 	{
 		if (damageable) {
 			damageable = false;
-			FlxG.sound.play("hitplayer_snd").volume = 4;
+			FlxG.sound.play("hitplayer_snd").volume = 6;
 	    	FlxG.camera.shake(0.02, 0.1);
 
 			player.animation.play("hitAnim");
@@ -338,6 +352,7 @@ class PlayState extends FlxState
 
 		youDied = true;
 		tryagain.visible = true;
+		tryaganKeys.visible = true;
 		tryagainBg.visible = true;
 		player.velocity.x = 0;
 		player.visible = false;
@@ -356,7 +371,7 @@ class PlayState extends FlxState
 		Coin.kill();
 		commitsScore.text = Std.string(coins.countDead());
 		add(new Pickupfx(Coin.x - 2, Coin.y - 7));
-		FlxG.sound.play("pickups_snd").volume = 0.15;
+		FlxG.sound.play("pickups_snd").volume = 0.6;
 
 		// if (coins.countLiving() == 0)
 		// {
